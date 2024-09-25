@@ -10,7 +10,7 @@
 read_clean_fcs <- function(file) {
 
   fcs_dat <- flowCore::read.FCS(file) |>
-    exprs() |>
+    flowCore::exprs() |>
     as.data.frame() |>
     dplyr::mutate(ImageNumber = gsub(paste0("^", path_to_files, "|\\.fcs$"),
                               "",
