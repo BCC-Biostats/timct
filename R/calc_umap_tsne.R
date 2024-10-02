@@ -2,6 +2,7 @@
 #'
 #' @param spe spe object
 #' @param email_address email address to send updates
+#' @param BPPARAM parallelization param
 #'
 #' @return spe object
 #' @export

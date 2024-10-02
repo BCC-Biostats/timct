@@ -1,3 +1,15 @@
+#' Batch Correction
+#'
+#' @param spe spe object
+#' @param email_address email address to send updates
+#' @param BPPARAM parallelization param
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' batch_correction(spe, t0jone12@louisville.edu)
+#'
 batch_correction <- function(spe, email_address, BPPARAM = NULL) {
 
   if (!"gmail.send" %in% names(gmailr::gm_scopes())) {

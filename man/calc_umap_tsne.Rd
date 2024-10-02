@@ -4,12 +4,14 @@
 \alias{calc_umap_tsne}
 \title{Calculate UMAP and TSNE}
 \usage{
-calc_umap_tsne(spe, email_address)
+calc_umap_tsne(spe, email_address, BPPARAM = NULL)
 }
 \arguments{
 \item{spe}{spe object}
 
 \item{email_address}{email address to send updates}
+
+\item{BPPARAM}{parallelization param}
 }
 \value{
 spe object
