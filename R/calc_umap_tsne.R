@@ -46,7 +46,7 @@ calc_umap_tsne <- function(spe, email_address, BPPARAM = NULL) {
                    BPPARAM = {{ BPPARAM }})
 
     # stop parallel backend
-    stopCluster(parallel_backend)
+    stopCluster({{ BPPARAM }})
 
   }
 
