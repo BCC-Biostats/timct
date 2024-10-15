@@ -7,15 +7,13 @@
 #' @examples
 #'
 #' read_clean_fcs("path/to/file.fcs")
-read_clean_fcs <- function(file) {
+read_clean_fcs <- function(file, path_to_files) {
 
   fcs_dat <- flowCore::read.FCS(file) |>
     flowCore::exprs() |>
     as.data.frame() |>
-    dplyr::mutate(ImageNumber = gsub(paste0("^", path_to_files, "|\\.fcs$"),
-                              "",
-                              file),
-           MeanRadius = (MajorAxisLength + MinorAxisLength) / 2
+    dplyr::mutate(ImageNumber = sub(".*/(.*)\\.fcs$", "\\1", file),
+                  MeanRadius = (MajorAxisLength + MinorAxisLength) / 2
     ) |>
     dplyr::select(-ImageId) |>
     dplyr::rename_with(~ ifelse(. == "CellId",

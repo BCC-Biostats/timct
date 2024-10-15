@@ -16,7 +16,7 @@ fcs_manage <- function(path_to_files = "data/raw_data/",
                            pattern = "\\.fcs$",
                            full.names = TRUE)
 
-  fcs_dat_list <- lapply(files_list, timct:::read_clean_fcs)
+  fcs_dat_list <- lapply(files_list, read_clean_fcs)
 
   fcs_dat <- fcs_dat_list |>
     dplyr::bind_rows()
