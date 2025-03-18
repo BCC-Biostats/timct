@@ -2,9 +2,9 @@ Package: timct
 Title: Tyler's IMC Tools
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Tyler", "Jones", , "tyler.jones@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: My set of functions to help with IMC.
+Description: A set of functions to assist with imaging mass cytometry (IMC) analysis, including pixel intensity calculations, anomaly detection, and data preparation tools.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -14,7 +14,9 @@ Imports:
   dplyr,
   flowCore,
   scater,
-  gmailr
+  gmailr,
+  dbscan,
+  pbapply
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

@@ -4,7 +4,7 @@
 \alias{read_clean_fcs}
 \title{Read and CLean FCS Files}
 \usage{
-read_clean_fcs(file)
+read_clean_fcs(file, path_to_files)
 }
 \arguments{
 \item{file}{}
