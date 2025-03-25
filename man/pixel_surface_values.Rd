@@ -23,23 +23,23 @@ the fitted surface. The np package efficiently computes the kernel regression.
 }
 \examples{
 \dontrun{
-  # Ensure the np package is installed: install.packages("np")
-  library(np)
-  set.seed(123)
-  # Generate example pixel data
-  pixels <- data.frame(
-    x = runif(100, 0, 5),
-    y = runif(100, 0, 5),
-    value = rnorm(100)
-  )
-  # Define cell locations where predictions are desired
-  cells <- data.frame(
-    x = c(1, 2, 3),
-    y = c(1, 2, 3)
-  )
-  # Fit the surface and predict cell values
-  preds <- predict_surface_cells_np(cells, pixels)
-  print(preds)
+# Ensure the np package is installed: install.packages("np")
+library(np)
+set.seed(123)
+# Generate example pixel data
+pixels <- data.frame(
+  x = runif(100, 0, 5),
+  y = runif(100, 0, 5),
+  value = rnorm(100)
+)
+# Define cell locations where predictions are desired
+cells <- data.frame(
+  x = c(1, 2, 3),
+  y = c(1, 2, 3)
+)
+# Fit the surface and predict cell values
+preds <- predict_surface_cells_np(cells, pixels)
+print(preds)
 }
 
 }

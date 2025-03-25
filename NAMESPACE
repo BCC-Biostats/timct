@@ -2,6 +2,7 @@
 
 export(average_pixel_intensity)
 export(fcs_manage)
+export(get_dir_structure)
 export(pixel_surface_values)
 import(np)
 importFrom(dbscan,frNN)
