@@ -11,17 +11,25 @@ average_pixel_intensity(points, pixels, radius)
 
 \item{pixels}{A data frame with columns \code{x}, \code{y}, and \code{value} representing the spatial coordinates and intensity values of pixels.}
 
-\item{radius}{A numeric value specifying the radius within which pixel intensities will be averaged for each point.}
+\item{radius}{A numeric value or a numeric vector. If a vector is provided, its length must equal the number of rows in \code{points},
+with each element specifying the radius for the corresponding point.}
 }
 \value{
 A numeric vector containing the average pixel intensity for each point in the \code{points} data frame.
 }
 \description{
-This function calculates the average intensity of pixels within a specified radius of each point.
+This function calculates the average intensity of pixels within a specified radius (or radii)
+of each point. When given a vector of radii, it performs one spatial search using the maximum
+radius and then filters the results for each point.
 }
 \examples{
+# Using a single radius
 points <- data.frame(x = c(1, 2, 3), y = c(1, 2, 3))
 pixels <- data.frame(x = runif(100, 0, 5), y = runif(100, 0, 5), value = rnorm(100))
 average_pixel_intensity(points, pixels, radius = 2)
+
+# Using a vector of radii
+radius_vector <- c(1, 2, 3)
+average_pixel_intensity(points, pixels, radius = radius_vector)
 
 }

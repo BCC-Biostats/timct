@@ -2,5 +2,7 @@
 
 export(average_pixel_intensity)
 export(fcs_manage)
+export(pixel_surface_values)
+import(np)
 importFrom(dbscan,frNN)
 importFrom(pbapply,pbsapply)
